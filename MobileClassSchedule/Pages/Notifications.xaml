@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClassSchedule.Pages.Notifications"
+             Title="Notifications">
+    <VerticalStackLayout>
+        <StackLayout Orientation="Vertical" x:Name="StackEm" HorizontalOptions="FillAndExpand" Margin="10" Spacing="10">
+            
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10" Spacing="10">
+            <Button Text="Add Notification" Background="RoyalBlue" Clicked="addClicked" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClassSchedule.Pages.AddNotification"
+             Title="AddNotification">
+    <VerticalStackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10, 0, 10, 0">
+            <Label Text="Select Corse or Assessment:" VerticalOptions="Center"/>
+            <Picker x:Name="typePicker"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" x:Name="StackEm" Margin="-15, 0, 10, 0">
+            <Label Text="Title:" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            <Entry x:Name="titleEntry" HorizontalOptions="EndAndExpand" WidthRequest="200"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HeightRequest="200" Margin="10, 0, 10, 0">
+            <Label Text="Message:" HorizontalOptions="EndAndExpand" VerticalOptions="Start"/>
+            <Border>
+                <Editor x:Name="messageEntry" HorizontalOptions="EndAndExpand" WidthRequest="200" HeightRequest="200"/>
+            </Border>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10, 0, 10, 0">
+            <Label Text="Date:" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            <DatePicker x:Name="date" HorizontalOptions="EndAndExpand" Format="yyyy-MM-dd"/>
+            <TimePicker x:Name="time" HorizontalOptions="EndAndExpand" Format="HH:mm"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10" Spacing="10" Padding="10">
+            <Button Text="Cancel" Clicked="cancelClicked" HorizontalOptions="FillAndExpand" Background="RoyalBlue" TextColor="White"/>
+            <Button Text="Save" Clicked="saveClicked" HorizontalOptions="FillAndExpand" x:Name="Save" TextColor="White"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

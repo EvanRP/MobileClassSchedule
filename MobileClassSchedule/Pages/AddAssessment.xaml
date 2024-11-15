@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClassSchedule.Pages.AddAssessment"
+             Title="AddAssessment">
+
+    <VerticalStackLayout Margin="10" Spacing="10">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Assessment Type:" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            <Picker x:Name="type" WidthRequest="200" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Title:" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            <Entry x:Name="title" WidthRequest="200" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Due Date:" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            <DatePicker x:Name="due" WidthRequest="200" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button Text="Cancel" Clicked="cancelClicked" HorizontalOptions="FillAndExpand" Background="RoyalBlue" TextColor="White"/>
+            <Button Text="Save" Clicked="saveClicked" x:Name="Save" HorizontalOptions="FillAndExpand" TextColor="White"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

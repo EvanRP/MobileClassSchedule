@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClassSchedule.Pages.AddTerm"
+             Title="Add Term">
+    <ScrollView x:Name="scrollViewMain">
+        <StackLayout Orientation="Vertical" Spacing="20">
+            <StackLayout Orientation="Vertical" Margin="100,20,10,0">
+                <StackLayout Orientation="Horizontal">
+                    <Label 
+                    Text="Term Name:"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                 />
+                    <Entry WidthRequest="150"
+                    x:Name="TermEntry"
+                />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                    VerticalOptions="Center"
+                    Text="Term Start:"
+                 />
+                    <DatePicker
+                    WidthRequest="150"
+                   x:Name="StartDate"
+                   
+                 />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                    VerticalOptions="Center"
+                    Text="Term End:"
+                 />
+                    <DatePicker
+                    WidthRequest="150"
+                   x:Name="EndDate"
+                 />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10" Margin="10">
+                <Button HorizontalOptions="FillAndExpand" x:Name="Cancel" Text="Cancel" Clicked="CancelClicked" Background="RoyalBlue" TextColor="White"/>
+                <Button HorizontalOptions="FillAndExpand" x:Name="Save" Text="Save" Clicked="SaveClicked" TextColor="White"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

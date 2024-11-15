@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClassSchedule.Pages.CoursePage"
+             Title="Course Page">
+    <VerticalStackLayout>
+        <Border>
+            <StackLayout Orientation="Horizontal" Spacing="5" Margin="5,0,5,0">
+                <Picker x:Name="status" Title="Course Status" FontSize="10"/>
+                <!--<label x:name="status"/>-->
+                <Label Text="Start Date:" HorizontalOptions="EndAndExpand" FontSize="10" VerticalOptions="Center"/>
+                <!--<Label x:Name="startDate" HorizontalOptions="End"/>-->
+                <DatePicker x:Name="startDate" FontSize="10"/>
+                <Label Text="End Date:" HorizontalOptions="End" FontSize="10" VerticalOptions="Center"/>
+                <!--<Label x:Name="endDate" HorizontalOptions="End"/>-->
+                <DatePicker x:Name="endDate" FontSize="10"/>
+            </StackLayout>
+        </Border>
+        
+        <Border>
+            <StackLayout Orientation="Vertical" Margin="5,0,5,0">
+                <Label Text="Instructor" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal" Spacing="30">
+                    <Entry x:Name="instructorName" HorizontalOptions="Start" FontSize="10" VerticalOptions="Center" />
+                    <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Email:" FontSize="10" VerticalOptions="Center"/>
+                            <Entry x:Name="instructorEmail" FontSize="10"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Phone:" FontSize="10" VerticalOptions="Center"/>
+                            <Entry x:Name="instructorPhone" FontSize="10"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Border>
+        
+        <!--<StackLayout Orientation="Horizontal" Spacing="5">
+            <Label Text="Due Date:" FontSize="10" VerticalOptions="Center" Padding="10,0,0,0"/>
+            <DatePicker x:Name="dueDate" FontSize="10" />
+        </StackLayout>-->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Notes:" Padding="10,20,0,0"/>
+            <Button Text=" • • •" HorizontalOptions="EndAndExpand" FontSize="10" BackgroundColor="white" TextColor="black" Padding="0,0,10,-20" Clicked="shareClicked"/>
+            <!-- <Button Text=" • • •" HorizontalOptions="EndAndExpand" FontSize="10" BackgroundColor="white" TextColor="black" Padding="0,0,10,-20"/> 
+             <Button Text="Share Notes" FontSize="10" HorizontalOptions="EndAndExpand" Padding="5,0,10,0" Clicked="shareClicked"/> -->
+        </StackLayout>
+        <Border HeightRequest="200">
+            <Editor x:Name="Notes" HeightRequest="200"/>
+        </Border>
+
+        <StackLayout Orientation="Vertical" Spacing="10" Padding="5,10,5,0">
+            <Button Text="Assessments" Background="RoyalBlue" Clicked="assessmentClicked"/>
+            <Button Text="Notifications" Clicked="notificationClicked" Background="RoyalBlue"/>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Button Text="Delete" HorizontalOptions="FillAndExpand" Clicked="deleteClicked" Background="RoyalBlue"/>
+                <Button Text="Save" HorizontalOptions="FillAndExpand" Clicked="saveClicked" x:Name="Save"/>
+            </StackLayout>
+            <Label x:Name="courseIdLabel" IsVisible="false"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

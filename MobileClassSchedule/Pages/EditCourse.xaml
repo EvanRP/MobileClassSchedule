@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClassSchedule.Pages.EditCourse"
+             Title="EditCourse">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                    Course #:
+                </Label>
+                <Entry x:Name="CourseCode" WidthRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
+                <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                    Course Title:
+                </Label>
+                <Entry x:Name="CourseName" WidthRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                        Instructor First Name:
+                    </Label>
+                    <Entry x:Name="InstructorFName" WidthRequest="150"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
+                    <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                        Instructor Last Name:
+                    </Label>
+                    <Entry x:Name="InstructorLName" WidthRequest="150"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="Instructor's Phone:"/>
+                    <Entry x:Name="iPhone" WidthRequest="150"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="Instructor's Email:"/>
+                    <Entry x:Name="iEmail" WidthRequest="150"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
+                <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                    Start Date:
+                </Label>
+                <DatePicker x:Name="startDate" WidthRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
+                <Label VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                    End Date:
+                </Label>
+                <DatePicker x:Name="endDate" WidthRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10" Spacing="10">
+                <Button Text="Cancel" Clicked="cancelClicked" HorizontalOptions="FillAndExpand" Background="RoyalBlue" TextColor="White"/>
+                <Button Text="Save" Clicked="saveClicked" x:Name="Save" HorizontalOptions="FillAndExpand" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

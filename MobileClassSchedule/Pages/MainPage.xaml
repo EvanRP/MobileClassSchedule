@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClassSchedule.Pages.MainPage">
+    <ScrollView x:Name="scrollViewMain">
+        <StackLayout Margin="10" Spacing="10">
+            <StackLayout x:Name="termStackView" Spacing="10">
+
+            </StackLayout>
+            <StackLayout Spacing="10">
+                <Button
+                Text="Add Term"
+                Clicked="AddTermClicked"
+                Background="RoyalBlue"
+                />
+                
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
